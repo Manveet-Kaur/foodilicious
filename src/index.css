@@ -36,6 +36,44 @@ h1 {
   line-height: 1.1;
 }
 
+button {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #666 !important;
+  margin-top: 10px;
+  transition: all 0.5s ease-in-out !important;
+}
+
+button:hover {
+  border: 1px solid #ffd858 !important;
+  color: #ffd858 !important;
+  background-color: transparent !important;
+}
+
+button:active {
+  border: 1px solid #ffd858 !important;
+}
+
+button:focus-visible {
+  outline: 4px solid #ffd858 !important;
+}
+
+input {
+  transition: all 0.5s ease-in-out;
+}
+
+input:hover,
+input:active,
+input:focus {
+  border: 1px solid #ffd858 !important;
+  color: #ffd858 !important;
+  background-color: transparent !important;
+  outline: #ffd858;
+}
+input:focus {
+  box-shadow: 0 0 0 2px rgba(254, 203, 0, 0.125) !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

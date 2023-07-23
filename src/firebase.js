@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
-// import { getFirestore } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firbaseConfig = {
   apiKey: import.meta.env.VITE_REACT_APP_FIRBASE_API_KEY,
@@ -13,7 +14,8 @@ const firbaseConfig = {
 
 const app = initializeApp(firbaseConfig);
 const auth = getAuth(app);
-// const db = getFirestore(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
 
 export const logInWithEmailAndPassword = async (email, password) => {
   try {
