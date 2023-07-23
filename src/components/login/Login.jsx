@@ -3,10 +3,8 @@ import { Button, Form, Input } from "antd";
 import "./Login.css";
 import SunAndMoon from "../../assets/day-and-night.png";
 
-const Login = () => {
-  const onFinish = (values) => {
-    console.log("Success:", values);
-  };
+// eslint-disable-next-line react/prop-types
+const Login = ({ onFinish }) => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
@@ -30,7 +28,7 @@ const Login = () => {
           autoComplete="off"
         >
           <Form.Item
-            name="username"
+            name="email"
             rules={[
               {
                 required: true,
@@ -38,7 +36,7 @@ const Login = () => {
               },
             ]}
           >
-            <Input placeholder="Username" />
+            <Input placeholder="Email" />
           </Form.Item>
 
           <Form.Item
