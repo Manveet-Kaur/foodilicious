@@ -18,7 +18,7 @@ function App() {
     }
   };
 
-  return <>{true ? <Moments /> : <Login onFinish={onFinish} />}</>;
+  return <>{isAuthenticated ? <Moments /> : <Login onFinish={onFinish} />}</>;
 }
 
 export default App;

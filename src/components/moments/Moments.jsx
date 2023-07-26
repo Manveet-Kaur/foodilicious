@@ -1,17 +1,17 @@
 import { useState } from "react";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
+// import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+// import {
+//   getStorage,
+//   ref,
+//   uploadBytesResumable,
+//   getDownloadURL,
+// } from "firebase/storage";
 
 import "./Moments.css";
 import { Button, Modal, Form, Input, message, Upload } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 
-import { db } from "../../firebase";
+// import { db } from "../../firebase";
 
 const props = {
   name: "file",
@@ -35,7 +35,7 @@ const props = {
 
 const Moments = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   const onFinish = async (values) => {
     console.log("values", values);
