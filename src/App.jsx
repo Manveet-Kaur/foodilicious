@@ -3,7 +3,7 @@ import { useState } from "react";
 import { logInWithEmailAndPassword } from "./firebase";
 import Login from "./components/login/Login";
 import "./App.css";
-import StoryWall from "./components/story-wall/StoryWall";
+import Moments from "./components/moments/Moments";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -18,7 +18,7 @@ function App() {
     }
   };
 
-  return <>{isAuthenticated ? <StoryWall /> : <Login onFinish={onFinish} />}</>;
+  return <>{true ? <Moments /> : <Login onFinish={onFinish} />}</>;
 }
 
 export default App;
